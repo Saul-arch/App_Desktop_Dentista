@@ -1,0 +1,26 @@
+plugins {
+    id 'java'
+}
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.1'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.1'
+    implementation 'com.formdev:flatlaf:3.2.1'
+    implementation 'com.formdev:flatlaf-extras:3.2.1'
+    implementation 'org.jfree:jfreechart:1.5.3'
+    implementation 'com.oracle.database.jdbc:ojdbc8:19.3.0.0'
+    implementation 'com.google.code.gson:gson:2.8.8' // O la versión más reciente
+    implementation group: 'com.fasterxml.jackson.core', name: 'jackson-databind', version: '2.14.1'
+
+}
+
+test {
+    useJUnitPlatform()
+}
